@@ -311,6 +311,7 @@ case "$x" in
    ;;
    0|00)
    menu
+;;
    *)
    echo -e "\n\033[1;31mOpcao invalida !\033[0m"
    sleep 2
