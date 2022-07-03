@@ -320,7 +320,7 @@ esac
 while true $x != "ok"
 do
 stsl=$(ps x | grep "limiter"|grep -v grep > /dev/null && echo -e "\033[1;32m(ON◉) " || echo -e "\033[1;31m(OFF) ")
-stsl=$(ps x | grep "sinc"|grep -v grep > /dev/null && echo -e "\033[1;32m(ON◉) " || echo -e "\033[1;31m(OFF) ")
+stss=$(ps x | grep "sinc"|grep -v grep > /dev/null && echo -e "\033[1;32m(ON◉) " || echo -e "\033[1;31m(OFF) ")
 stson=$(ps x | grep "onlineapp"|grep -v grep > /dev/null && echo -e "\033[1;32m(ON◉) " || echo -e "\033[1;31m(OFF) ")
 stsu=$(ps x | grep "udpvpn"|grep -v grep > /dev/null && echo -e "\033[1;32m(ON◉) " || echo -e "\033[1;31m(OFF) ")
 if [[ "$(grep -c "Ubuntu" /etc/issue.net)" = "1" ]]; then
@@ -371,7 +371,7 @@ echo -e "\033[1;31m║   \033[1;31m[\033[1;36m01\033[1;31m] \033[1;37m• \033[1
 \033[1;31m║   [\033[1;36m06\033[1;31m] \033[1;37m• \033[1;33mALTERAR LIMITE \033[1;31m           [\033[1;36m18\033[1;31m] \033[1;37m• \033[1;33mFERRAMENTAS     \033[1;31m ║
 \033[1;31m║   [\033[1;36m07\033[1;31m] \033[1;37m• \033[1;33mMUDAR SENHA \033[1;31m              [\033[1;36m19\033[1;31m] \033[1;37m• \033[1;33mLIMITER $stsl \033[1;31m  ║
 \033[1;31m║   [\033[1;36m08\033[1;31m] \033[1;37m• \033[1;33mREMOVER EXPIRADOS \033[1;31m        [\033[1;36m20\033[1;31m] \033[1;37m• \033[1;33mBADVPN PRO $stsu\033[1;31m║
-\033[1;31m║   [\033[1;36m09\033[1;31m] \033[1;37m• \033[1;33mRELATORIO DE USUARIOS \033[1;31m    [\033[1;36m21\033[1;31m] \033[1;37m• \033[1;33mSINC PAINEL    \033[1;31m ║
+\033[1;31m║   [\033[1;36m09\033[1;31m] \033[1;37m• \033[1;33mRELATORIO DE USUARIOS \033[1;31m    [\033[1;36m21\033[1;31m] \033[1;37m• \033[1;33mSINC PAINEL$stss\033[1;31m║
 \033[1;31m║   [\033[1;36m10\033[1;31m] \033[1;37m• \033[1;33mMODO DE CONEXAO \033[1;31m          [\033[1;36m22\033[1;31m] \033[1;37m• \033[1;33mCHECKUSER 4G \033[1;31m    ║
 \033[1;31m║   [\033[1;36m11\033[1;31m] \033[1;37m• \033[1;33mCRIAR MEMORIA SWAP \033[1;31m       [\033[1;36m23\033[1;31m] \033[1;37m• \033[1;33mMAIS OPÇÕES  \033[1;31m    ║
 \033[1;31m║   [\033[1;36m12\033[1;31m] \033[1;37m• \033[1;33mCHECKUSER GLTUNNEL \033[1;31m       [\033[1;36m00\033[1;31m] \033[1;37m• \033[1;33mSAIR DO PAINEL \033[1;31m  ║"
