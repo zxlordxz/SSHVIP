@@ -15,12 +15,12 @@ echo -ne "\033[1;32mO QUE DESEJA FAZER \033[1;33m?\033[1;37m "; read i
 
       1 | 01)
          clear        
-         sinc
+         sinc.sh
          ;;
 
       2 | 02)
          clear
-         sincarm
+         sincarm.sh
          ;;
 
       0 | 00)
