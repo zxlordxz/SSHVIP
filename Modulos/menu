@@ -460,8 +460,7 @@ case "$x" in
    ;;
    19)
    clear
-   badmenu
-   exit;
+   .bad
    ;;
    20)
    clear
