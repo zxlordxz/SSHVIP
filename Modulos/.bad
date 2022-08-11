@@ -1,7 +1,7 @@
 
 #!/bin/bash
 
-figlet   '  BADVPN PRO' | boxes -d stone -p a0v0 | lolcat
+figlet   '  BADVPN' | boxes -d stone -p a0v0 | lolcat
 echo -e "\E[44;1;37m           INSTALADOR BADVPN            \E[0m"
     echo ""
     echo -e "\033[1;31m[\033[1;36m01\033[1;31m] \033[1;37m• \033[1;33mINSTALAR BADVPN (PADRÃO) \033[0m"
