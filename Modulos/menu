@@ -421,6 +421,7 @@ case "$x" in
    exit;
    ;;
    11)
+   clear
    swapmemory
    ;;
    12)
@@ -445,6 +446,7 @@ case "$x" in
    echo -ne "\n\033[1;31mENTER \033[1;33mpara retornar ao \033[1;32mMENU!\033[0m"; read
    ;;
    16)
+   clear
    .sinc
    echo -ne "\n\033[1;31mENTER \033[1;33mpara retornar ao \033[1;32mMENU!\033[0m"; read
    ;;
@@ -453,11 +455,12 @@ case "$x" in
    utili
    ;;
    18)
+   clear
    limit_ssh
    ;;
    19)
    clear
-   badvpn
+   badmenu
    exit;
    ;;
    20)
