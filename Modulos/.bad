@@ -5,7 +5,7 @@ figlet   '  BADVPN' | boxes -d stone -p a0v0 | lolcat
 echo -e "\E[44;1;37m           INSTALADOR BADVPN            \E[0m"
     echo ""
     echo -e "\033[1;31m[\033[1;36m01\033[1;31m] \033[1;37m• \033[1;33mINSTALAR BADVPN (7300) \033[0m"
-    echo -e "\033[1;31m[\033[1;36m02\033[1;31m] \033[1;37m• \033[1;33mMAIS OPÇÕES \033[0m"
+    echo -e "\033[1;31m[\033[1;36m02\033[1;31m] \033[1;37m• \033[1;33mGERENCIAR BADVPN \033[0m"
     echo -e "\033[1;31m[\033[1;36m00\033[1;31m] \033[1;37m• \033[1;33mRETORNAR AO MENU \033[0m"
     echo ""
 
