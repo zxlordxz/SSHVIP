@@ -460,7 +460,7 @@ case "$x" in
    ;;
    19)
    clear
-   .bad
+   badpro1
    ;;
    20)
    clear
