@@ -4,7 +4,7 @@ clear
 system=$(cat /etc/issue.net)
 date=$(date '+%Y-%m-%d <> %H:%M:%S')
 echo -e "\033[1;37m $system                $date"
-figlet   '   BADVPN PRO' | lolcat
+figlet   ' BADVPN-PRO ' | lolcat
     echo -e "\033[1;31m════════════════════════════════════════════════════════════\033[0m"
     if ps x | grep -w udpvpn | grep -v grep 1>/dev/null 2>/dev/null; then
         echo -e "\033[1;37mPORTAS\033[1;37m: \033[1;32m$(netstat -nplt | grep 'badvpn-ud' | awk {'print $4'} | cut -d: -f2 | xargs)"
