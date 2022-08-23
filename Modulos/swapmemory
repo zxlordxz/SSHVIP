@@ -68,4 +68,4 @@ echo -ne "\033[1;31m╚╣\033[1;32m INFORME UMA OPÇÃO \033[1;37m: " ; read x
                         done
 		
 }
-menu
+swapmemory
