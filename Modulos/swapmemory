@@ -5,7 +5,8 @@ _diskText=$(df -h | awk '$NF=="/"{printf "%d/%dGB + (%s)\n", $3,$2,$5}')
 _swap1=$(free -h | grep -i swap | awk {'print $2'})
 swap4=$(free | awk '/Swap/{printf("%.1f%"), $3/($2+.000000001)*100}';)
 clear
-figlet   ' SWAP' | lolcat
+figlet   ' MEMORIA 
+SWAP' | lolcat
 echo -e "\033[1;31m════════════════════════════════════════════════════════════\033[0m"
 echo -e "\033[1;36m    SWAP INSTALADO \033[1;37m ($_swap1) \033[1;31m║\033[1;36m ESPAÇO TOTAL \033[1;37m ($_diskText"
 echo -e "\033[1;31m════════════════════════════════════════════════════════════\033[0m"
