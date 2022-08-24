@@ -277,9 +277,11 @@ case "$x" in
    sleep 3
    ;;
    25)
+   clear
    botssh
    ;;
    26)
+   clear
    inst-botteste
    ;;
    27)
@@ -288,6 +290,7 @@ case "$x" in
    sleep 3
    ;;
    28)
+   clear
    autoexec
    ;;
    29)
@@ -300,9 +303,11 @@ case "$x" in
    echo -ne "\n\033[1;31mENTER \033[1;33mpara retornar ao \033[1;32mMENU!\033[0m"; read
    ;;
    0|00)
+   clear
    menu
    ;;
    *)
+   clear
    echo -e "\n\033[1;31mOpcao invalida !\033[0m"
    sleep 2
 esac
@@ -417,8 +422,8 @@ case "$x" in
    echo -ne "\n\033[1;31mENTER \033[1;33mpara retornar ao \033[1;32mMENU!\033[0m"; read
    ;;
    10)
+   clear
    conexao
-   exit;
    ;;
    11)
    clear
@@ -468,9 +473,11 @@ case "$x" in
    echo -ne "\n\033[1;31mENTER \033[1;33mpara retornar ao \033[1;32mMENU!\033[0m"; read
    ;;
    21)
+   clear
    initcheck
    ;;
    22)
+   clear
    menu2
    ;;
    00)
