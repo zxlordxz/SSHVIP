@@ -1,9 +1,13 @@
 #!/bin/bash
 
+stsbot=$(ps x | grep "bot_plus"|grep -v grep > /dev/null && echo -e "\033[1;32m(ON◉) " || echo -e "\033[1;31m(OFF) ")
+stsbotteste=$(ps x | grep "bot_teste"|grep -v grep > /dev/null && echo -e "\033[1;32m(ON◉) " || echo -e "\033[1;31m(OFF) ")
+stsbotrev=$(ps x | grep "bot_rev"|grep -v grep > /dev/null && echo -e "\033[1;32m(ON◉) " || echo -e "\033[1;31m(OFF) ")
+
 figlet   '  BOT' | lolcat
     echo -e "\033[1;31m════════════════════════════════════════════════════════════\033[0m"
-    echo -e "  \033[1;31m\033[1;34m[\033[1;37m01\033[1;34m]\033[1;37m ➩  \033[1;33mINSTALAR BOT \033[0m"
-    echo -e "  \033[1;31m\033[1;34m[\033[1;37m02\033[1;34m]\033[1;37m ➩  \033[1;33mINSTALAR BOT DE TESTE \033[0m"
+    echo -e "  \033[1;31m\033[1;34m[\033[1;37m01\033[1;34m]\033[1;37m ➩  \033[1;33mINSTALAR BOT $stsbot \033[0m"
+    echo -e "  \033[1;31m\033[1;34m[\033[1;37m02\033[1;34m]\033[1;37m ➩  \033[1;33mINSTALAR BOT DE TESTE $stsbotteste\033[0m"
     echo -e "\033[1;31m════════════════════════════════════════════════════════════\033[0m"
     echo -e "  \033[1;31m\033[1;34m[\033[1;37m00\033[1;34m]\033[1;37m ➩  \033[1;33mVOLTAR AO MENU PRINCIPAL \033[0m"
     echo -e "\033[1;31m════════════════════════════════════════════════════════════\033[0m"
