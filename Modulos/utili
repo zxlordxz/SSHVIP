@@ -8,14 +8,11 @@
     echo -e "\033[1;31m════════════════════════════════════════════════════════════\033[0m"
     echo -e "  \033[1;31m\033[1;34m[\033[1;37m01\033[1;34m]\033[1;37m ➩  \033[1;33mFIREWALL (PRO) \033[0m"
     echo -e "  \033[1;31m\033[1;34m[\033[1;37m02\033[1;34m]\033[1;37m ➩  \033[1;33mANTI ATAQUE DDOS \033[01;31m $sts2\033[0m"
-    echo -e "  \033[1;31m\033[1;34m[\033[1;37m03\033[1;34m]\033[1;37m ➩  \033[1;33mBOT REVENDA \033[0m"
-    echo -e "  \033[1;31m\033[1;34m[\033[1;37m04\033[1;34m]\033[1;37m ➩  \033[1;33mFERRAMENTAS \033[0m"
-    echo -e "  \033[1;31m\033[1;34m[\033[1;37m05\033[1;34m]\033[1;37m ➩  \033[1;33mTRAFEGO TOTAL \033[0m"
-    echo -e "  \033[1;31m\033[1;34m[\033[1;37m06\033[1;34m]\033[1;37m ➩  \033[1;33mBLOQUEAR USUARIO \033[0m"
-    echo -e "  \033[1;31m\033[1;34m[\033[1;37m07\033[1;34m]\033[1;37m ➩  \033[1;33mMONITORAR TRÁFEGO DE REDE \033[0m"
-    echo -e "  \033[1;31m\033[1;34m[\033[1;37m08\033[1;34m]\033[1;37m ➩  \033[1;33mMONITORAR PROCESSOS ATIVOS \033[0m"
-    echo -e "  \033[1;31m\033[1;34m[\033[1;37m09\033[1;34m]\033[1;37m ➩  \033[1;33mMONITORAR SISTEMA COMPLETO \033[0m"
-    echo -e "  \033[1;31m\033[1;34m[\033[1;37m10\033[1;34m]\033[1;37m ➩  \033[1;33mMONITORAR BANDA POR PROCESSOS \033[0m"
+    echo -e "  \033[1;31m\033[1;34m[\033[1;37m04\033[1;34m]\033[1;37m ➩  \033[1;33mTRAFEGO TOTAL \033[0m"
+    echo -e "  \033[1;31m\033[1;34m[\033[1;37m05\033[1;34m]\033[1;37m ➩  \033[1;33mMONITORAR TRÁFEGO DE REDE \033[0m"
+    echo -e "  \033[1;31m\033[1;34m[\033[1;37m06\033[1;34m]\033[1;37m ➩  \033[1;33mMONITORAR PROCESSOS ATIVOS \033[0m"
+    echo -e "  \033[1;31m\033[1;34m[\033[1;37m07\033[1;34m]\033[1;37m ➩  \033[1;33mMONITORAR SISTEMA COMPLETO \033[0m"
+    echo -e "  \033[1;31m\033[1;34m[\033[1;37m08\033[1;34m]\033[1;37m ➩  \033[1;33mMONITORAR BANDA POR PROCESSOS \033[0m"
     echo -e "\033[1;31m════════════════════════════════════════════════════════════\033[0m"
     echo -e "  \033[1;31m\033[1;34m[\033[1;37m00\033[1;34m]\033[1;37m ➩  \033[1;33mVOLTAR AO MENU PRINCIPAL \033[0m"
     echo -e "\033[1;31m════════════════════════════════════════════════════════════\033[0m"
@@ -31,19 +28,10 @@
 			2 | 02)
 			ddos
 			;;
-			3 | 03)
-			initbot
-			;;
-			4 | 04)
-			mtuning
-			;;
-			5 | 05) 
+			3 | 03) 
 			trafegototal
 			;;
-			6 | 06)
-			blockuser
-			;;
-			7 | 07)
+			4 | 04)
 			clear
 			echo -e "\033[1;33mPARA SAIR CLICK CTRL + C\033[1;36m"
 			sleep 5s
@@ -51,7 +39,7 @@
 			clear
 			menu 
 			;;
-			8 | 08)
+			5 | 05)
 			clear
 			echo -e "\033[1;33mPARA SAIR CLICK CTRL + C\033[1;36m"
 			sleep 5s
@@ -59,7 +47,7 @@
 			clear
 			menu 
 			;;
-			9 | 09)
+			6 | 06)
 			clear
 			echo -e "\033[1;33mPARA SAIR CLICK CTRL + C\033[1;36m"
 			sleep 5s
@@ -67,7 +55,7 @@
 			clear
 			menu 
 			;;
-			10 | 10)
+			7 | 07)
 			clear
 			echo -e "\033[1;33mPARA SAIR CLICK CTRL + C\033[1;36m"
 			sleep 5s
