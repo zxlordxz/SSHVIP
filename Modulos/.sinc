@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 figlet   '  SINC-PAINEL' | boxes -d stone -p a0v0 | lolcat
