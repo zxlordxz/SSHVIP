@@ -228,10 +228,7 @@ swap1=$(printf '%-5s' "$(free -h | grep -i swap | awk {'print $2'})")
 swap2=$(printf '%-5s' "$(free -h | grep -i swap | awk {'print $4'})")
 swap3=$(printf '%-5s' "$(free -h | grep -i swap | awk {'print $3'})")
 clear
-echo -e "\033[0;35m
-          ░▒█▀▀▀█ █░▒█ █░▄▀ █░▒█ █▄░▒█ █▀▀█░▒
-          ░▒▀▀▀▄▄ █░▒█ █▀▄░ █░▒█ █▒█▒█ █▄▄█░▒
-          ░▒█▄▄▄█ ▀▄▄▀ █░▒█ ▀▄▄▀ █░░▀█ █░▒█░▒\033[0m"
+figlet "SSHVIP" | lolcat
 echo -e "\033[0;35m╔─━━━━━━━━━━━━━━━━━━━━━╯░★★★★★░╰━━━━━━━━━━━━━━━━━━━━━─╗╗\033[0m"
 echo -e "\E[42;1;37m               ♕SCRIPT★SUKUNA★PREMIUM♕                \E[0m"
 echo -e "\033[0;35m╚─━━━━━━━━━━━━━━━━━━━━━╮░★★★★★░╭━━━━━━━━━━━━━━━━━━━━━─╝╝\033[0m"
@@ -354,10 +351,7 @@ swap1=$(printf '%-5s' "$(free -h | grep -i swap | awk {'print $2'})")
 swap2=$(printf '%-5s' "$(free -h | grep -i swap | awk {'print $4'})")
 swap3=$(printf '%-5s' "$(free -h | grep -i swap | awk {'print $3'})")
 clear
-echo -e "\033[0;35m
-          ░▒█▀▀▀█ █░▒█ █░▄▀ █░▒█ █▄░▒█ █▀▀█░▒
-          ░▒▀▀▀▄▄ █░▒█ █▀▄░ █░▒█ █▒█▒█ █▄▄█░▒
-          ░▒█▄▄▄█ ▀▄▄▀ █░▒█ ▀▄▄▀ █░░▀█ █░▒█░▒\033[0m"
+figlet "SSHVIP" | lolcat
 echo -e "\033[0;35m╔─━━━━━━━━━━━━━━━━━━━━━╯░★★★★★░╰━━━━━━━━━━━━━━━━━━━━━─╗╗\033[0m"
 echo -e "\E[42;1;37m               ♕SCRIPT★SUKUNA★PREMIUM♕                \E[0m"
 echo -e "\033[0;35m╚─━━━━━━━━━━━━━━━━━━━━━╮░★★★★★░╭━━━━━━━━━━━━━━━━━━━━━─╝╝\033[0m"
