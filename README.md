@@ -1,6 +1,4 @@
-# SSH-PLUS
-
-# @donomodderajuda
+# SSH-VIP
 
 PROJETO EM ANDAMENTO...
 
@@ -16,5 +14,3 @@ Só joga na máquina e deixar instalar
 
 
 apt install wget -y; bash <(wget -qO- raw.githubusercontent.com/zxlordxz/SSHVIP/main/ssh-plus)
-
-# PRO
