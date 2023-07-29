@@ -1,6 +1,15 @@
 #!/bin/bash
     clear
     echo -e "\033[46;1;37m                  WEBSOCKET SECURITY                   \033[0m"
+    echo -e "\033[0;36m════════════════════════════•⊱✦⊰•════════════════════════════\033[0m"
+	echo -e "\033[01;31m\033[1;32mSERVICO: \033[1;33mOPENSSH \033[1;32mPORTA: \033[1;37m$(grep 'Port' /etc/ssh/sshd_config | cut -d' ' -f2 | grep -v 'no' | xargs)" && sts6="\033[1;32m◉ "
+			[[ "$(netstat -tlpn | grep 'docker' | wc -l)" != '0' ]] && {
+	echo -e "\033[01;31m\033[1;32mSERVICO: \033[1;33mWEB-SECURITY: \033[1;32mPORTA: \033[1;37m$(netstat -nplt | grep 'WebSocket' | awk {'print $4'} | cut -d: -f2 | xargs)"
+				security1="\033[1;32m◉ "
+			} || {
+				security1="\033[1;31m○ "
+			}
+	echo -e "\033[0;36m════════════════════════════•⊱✦⊰•════════════════════════════\033[0m"
     echo -e " \033[47;1;30mINSTALE PRIMEIRO ANTES DE ATIVAR O WEB-SECURITY \033[0m"
 	echo -e "\033[0;36m════════════════════════════•⊱✦⊰•════════════════════════════\033[0m"
     echo -e "\033[01;31m\033[1;31m\033[1;34m[\033[1;37m 01 \033[1;34m]\033[1;37m ➩  \033[1;33mINSTALAR\033[0m"
@@ -20,6 +29,7 @@
 			clear
 			case $x in
 			1 | 01)
+			clear
 			wget http://worldofdragon.us.eu.org/wssecu/wssecury.sh && dos2unix wssecury.sh && chmod 777 wssecury.sh && ./wssecury.sh
 			;;
 			2 | 02)
