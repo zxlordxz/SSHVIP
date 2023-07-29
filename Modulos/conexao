@@ -2121,7 +2121,7 @@ echo -e "\033[01;31m║\033[1;31m\033[5;34;47m                      CONEXAO     
 				xv2ray="\033[1;31m○ "
 			}
 			echo -e "\033[0;36m° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° °\033[0m"
-            echo -e " \033[1;37mOBS: PROXY DTUNNEL NAO MOSTRA NOS SERVIÇOS ACIMA\033[0m"
+            echo -e " \033[1;37mOBS: PROXY PREMIUM NAO MOSTRA NOS SERVIÇOS ACIMA\033[0m"
 			echo -e "\033[0;36m° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° °\033[0m"
 			echo -e "\033[0;31m   [\033[1;36m01\033[0;31m] \033[1;37m• \033[1;37mOPENSSH \033[01;31m $sts6\033[0m"
 echo -e "\033[0;31m   [\033[1;36m02\033[0;31m] \033[1;37m• \033[1;37mSQUID PROXY \033[01;31m $sts1\033[0m"
@@ -2133,14 +2133,15 @@ echo -e "\033[0;31m   [\033[1;36m07\033[0;31m] \033[1;37m• \033[1;37mSSLH MULT
 echo -e "\033[0;31m   [\033[1;36m08\033[0;31m] \033[1;37m• \033[1;37mCHISEL \033[01;31m $sts8\033[0m"
 echo -e "\033[0;31m   [\033[1;36m09\033[0;31m] \033[1;37m• \033[1;37mSLOWDNS \033[01;31m $sts9\033[0m"
 echo -e "\033[0;31m   [\033[1;36m10\033[0;31m] \033[1;37m• \033[1;37mTROJAN-GO \033[01;31m $trojansts\033[0m"
-echo -e "\033[0;31m   [\033[1;36m11\033[0;31m] \033[1;37m• \033[1;37mWEB-SECURITY $security2\033[0m"
-echo -e "\033[0;31m   [\033[1;36m12\033[0;31m] \033[1;37m• \033[1;37mPROXY DTUNNEL (PADRAO: 80) $proxyd1\033[0m"
-echo -e "\033[0;31m   [\033[1;36m13\033[0;31m] \033[1;37m• \033[1;37mMENU APACHE  \033[0m"
+echo -e "\033[0;31m   [\033[1;36m11\033[0;31m] \033[1;37m• \033[1;37mMENU APACHE  \033[0m"
+echo -e "\033[0;36m° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° °\033[0m"
+echo -e "\033[0;31m   [\033[1;36m12\033[0;31m] \033[1;37m• \033[1;37mPROXY PREMIUM (PADRAO: 80) $proxyd1\033[0m"
+echo -e "\033[0;31m   [\033[1;36m13\033[0;31m] \033[1;37m• \033[1;37mWEB-SECURITY $security2\033[0m"
             echo -e "\033[0;36m° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° °\033[0m"
 echo -e "\033[0;31m   [\033[1;36m00\033[0;31m] \033[1;37m• \033[1;37mVOLTAR  \033[1;32m<\033[1;33m<\033[1;31m< \033[0m"
 			echo -e "\033[0;36m╚═══════════════════════════•⊱✦⊰•═══════════════════════════╝\033[0m"
 			tput civis
-			echo -ne "\033[1;31m➤ \033[1;32mESCOLHA OPÇÃO DESEJADA\033[1;33m\033[1;31m\033[1;37m : ";
+			echo -ne "\033[1;31m➤ \033[1;32mESCOLHA OPÇÃO DESEJADA\033[1;33m\033[1;31m\033[1;37m: ";
 			read x
 			tput cnorm
 			clear
@@ -2176,14 +2177,16 @@ echo -e "\033[0;31m   [\033[1;36m00\033[0;31m] \033[1;37m• \033[1;37mVOLTAR  \
 			trojan-go
 			;;
 			11 | 11)
-			rm -f /etc/SSHPlus/WebSocket && wget http://worldofdragon.us.eu.org/wssecu/wssecury.sh && dos2unix wssecury.sh && chmod 777 wssecury.sh && ./wssecury.sh && screen -dmS novoWS /etc/SSHPlus/WebSocket -proxy_port 0.0.0.0:8080 -msg=Security
-			;;
+			clear
+			apache2menu
 			12 | 12)
+			clear
 			rm -f /usr/bin/proxy && curl -s -L -o /usr/bin/proxy https://github.com/Penguinehis/ProxyCracked/raw/main/proxy && chmod +x /usr/bin/proxy && screen -dmS proxy /usr/bin/proxy --port 80 --http --ssh-only --response CentralVPN
 			;;
 			13 | 13)
 			clear
-			apache2menu
+			rm -f /etc/SSHPlus/WebSocket && wget http://worldofdragon.us.eu.org/wssecu/wssecury.sh && dos2unix wssecury.sh && chmod 777 wssecury.sh && ./wssecury.sh && screen -dmS novoWS /etc/SSHPlus/WebSocket -proxy_port 0.0.0.0:8080 -msg=Security
+			;;
 			;;
 			0 | 00)
 			clear
