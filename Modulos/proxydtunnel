@@ -1,0 +1,50 @@
+#!/bin/bash
+    clear
+    echo -e "\033[46;1;37m                  PROXY DTUNNEL                   \033[0m"
+    echo -e " \033[47;1;30mMELHORA CONEXÃO SSH E A PORTA FICA ATIVA NO SECURITY E WEBSOCKET \033[0m"
+	echo -e "\033[0;36m════════════════════════════•⊱✦⊰•════════════════════════════\033[0m"
+    echo -e "\033[01;31m\033[1;31m\033[1;34m[\033[1;37m 01 \033[1;34m]\033[1;37m ➩  \033[47;1;30mINSTALAR\033[0m"
+	echo -e "\033[0;36m════════════════════════════•⊱✦⊰•════════════════════════════\033[0m"
+	echo -e " \033[47;1;30mATIVE APENAS UM PARA NAO OCORRER ERRO \033[0m"
+    echo -e "\033[01;31m\033[1;31m\033[1;34m[\033[1;37m 02 \033[1;34m]\033[1;37m ➩  \033[47;1;30mATIVAR (PORTA 80)\033[0m"
+    echo -e "\033[01;31m\033[1;31m\033[1;34m[\033[1;37m 03 \033[1;34m]\033[1;37m ➩  \033[41;1;37mATIVAR (PORTA 8080)\033[0m"
+	echo -e "\033[0;36m════════════════════════════•⊱✦⊰•════════════════════════════\033[0m"
+	echo -e "\033[01;31m\033[1;31m\033[1;34m[\033[1;37m 04 \033[1;34m]\033[1;37m ➩  \033[1;33mDESATIVAR PORTAS\033[0m"
+    echo -e "\033[0;36m════════════════════════════•⊱✦⊰•════════════════════════════\033[0m"
+    echo -e "\033[01;31m\033[1;31m\033[1;34m[\033[1;37m 00 \033[1;34m]\033[1;37m ➩  \033[1;33mVOLTAR  \033[1;32m<\033[1;33m<\033[1;31m< \033[0m"
+    echo -e "\033[0;36m════════════════════════════•⊱✦⊰•════════════════════════════\033[0m"
+			tput civis
+			echo -ne "\033[1;31m➤ \033[1;32mESCOLHA OPÇÃO DESEJADA\033[1;33m\033[1;31m\033[1;37m : ";
+			read x
+			tput cnorm
+			clear
+			case $x in
+			1 | 01)
+			{
+            rm -f /usr/bin/proxy
+            curl -s -L -o /usr/bin/proxy https://github.com/Penguinehis/ProxyCracked/raw/main/proxy
+            chmod +x /usr/bin/proxy
+            }
+			;;
+			2 | 02)
+			screen -dmS proxy /usr/bin/proxy --port 80 --http --ssh-only --response CentralVPN
+			;;
+			3 | 03)
+			screen -dmS proxy /usr/bin/proxy --port 8080 --http --ssh-only --response CentralVPN
+			;;
+			4 | 04)
+			screen -R proxy
+			;;
+			0 | 00)
+			clear
+			conexão
+			;;
+			*)
+			echo -e "\033[1;31mOpcao invalida !\033[0m"
+			sleep 2
+			;;
+			esac
+		done
+	}
+	fun_conexao
+}
