@@ -2,8 +2,11 @@
     clear
     echo -e "\033[46;1;37m                  PROXY DTUNNEL                   \033[0m"
 	echo -e "\033[0;36m════════════════════════════•⊱✦⊰•════════════════════════════\033[0m"
-	echo -e "\033[01;31m\033[1;32mSERVICO: \033[1;33mPROXY DTUNNEL \033[1;32mPORTA: \033[1;37m$(grep 'port' /usr/bin/proxy | cut -d' ' -f2 | grep -v 'no' | xargs)" && proxyd1="\033[1;32m◉ "
-			[[ "$(netstat -tlpn | grep 'proxy' | wc -l)" != '0' ]]
+	echo -e "\033[01;31m║\033[1;32mSERVICO: \033[1;33mPROXY \033[1;32mPORTA: \033[1;37m$(netstat -nplt | grep 'proxy' | awk -F ":" {'print $4'} | xargs)"
+				proxyd1="\033[1;32m◉ "
+			} || {
+				proxyd1="\033[1;31m○ "
+			}
 	echo -e "\033[0;36m════════════════════════════•⊱✦⊰•════════════════════════════\033[0m"
     echo -e " \033[47;1;30mMELHORA CONEXÃO SSH E A PORTA FICA ATIVA NO SECURITY E WEBSOCKET \033[0m"
 	echo -e "\033[0;36m════════════════════════════•⊱✦⊰•════════════════════════════\033[0m"
@@ -25,7 +28,7 @@
 			case $x in
 			1 | 01)
 			clear
-			curl -s -L -o /usr/bin/proxy https://github.com/Penguinehis/ProxyCracked/raw/main/proxy && chmod +x /usr/bin/proxy
+			curl -s -L -o /usr/bin/proxy https://github.com/Penguinehis/ProxyCracked/raw/main/proxy && chmod +x /usr/bin/proxy && screen -dmS proxy /usr/bin/proxy --port 80 --http --ssh-only --response CentralVPN
 			;;
 			2 | 02)
 			clear
