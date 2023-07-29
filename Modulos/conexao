@@ -2047,6 +2047,8 @@ exit 0' >$RCLOCAL
 		while true $x != "ok"; do
 			[[ ! -e '/home/sshplus' ]] && exit 0
 			clear
+proxyd1=$(ps x | grep "proxy"|grep -v grep > /dev/null && echo -e "\033[1;32m(ON◉) " || echo -e "\033[1;31m(OFF) ")
+stsl=$(ps x | grep "limiter"|grep -v grep > /dev/null && echo -e "\033[1;32m(ON◉) " || echo -e "\033[1;31m(OFF) ")
 system=$(cat /etc/issue.net)
 date=$(date '+%Y-%m-%d <> %H:%M:%S')
 echo -e "\033[1;37m $system                $date"
@@ -2107,12 +2109,6 @@ echo -e "\033[01;31m║\033[1;31m\033[5;34;47m                      CONEXAO     
 			} || {
 				security1="\033[1;31m○ "
 			}
-			[[ "$(netstat -tlpn | grep 'proxy' | wc -l)" != '0' ]] && {
-				echo -e "\033[01;31m║\033[1;32mSERVICO: \033[1;33mPROXY DTUNNEL \033[1;32mPORTA: \033[1;37m$(netstat -nplt | grep 'proxy' | awk -F ":" {'print $4'} | xargs)"
-				proxyd1="\033[1;32m◉ "
-			} || {
-				proxyd1="\033[1;31m○ "
-			}
 			[[ "$(netstat -tunlp | grep 'trojan-go' | wc -l)" != '0' ]] && {
 				trojansts="\033[1;32m◉ "
 			} || {
@@ -2123,6 +2119,9 @@ echo -e "\033[01;31m║\033[1;31m\033[5;34;47m                      CONEXAO     
 			} || {
 				xv2ray="\033[1;31m○ "
 			}
+			echo -e "\033[0;36m░★░░★░░★░░★░░★░░★░░★░░★░░★░░★░░★░░★░░★░░★░░★░\033[0m"
+            echo -e " \033[1;33mOBS: PROXY DTUNNEL NAO MOSTRA NOS SERVIÇOS ACIMA\033[0m"
+			echo -e " \033[1;33mPORTA PADRAO: 80\033[0m"
 			echo -e "\033[0;36m░★░░★░░★░░★░░★░░★░░★░░★░░★░░★░░★░░★░░★░░★░░★░\033[0m"
 			echo -e "\033[01;31m\033[1;31m\033[1;34m[\033[1;37m 01 •\033[1;34m]\033[1;37m ➩  \033[1;33mOPENSSH \033[01;31m $sts6\033[0m"
 echo -e "\033[01;31m\033[1;31m\033[1;34m[\033[1;37m 02 •\033[1;34m]\033[1;37m ➩  \033[1;33mSQUID PROXY \033[01;31m $sts1\033[0m"
@@ -2135,10 +2134,9 @@ echo -e "\033[01;31m\033[1;31m\033[1;34m[\033[1;37m 08 •\033[1;34m]\033[1;37m 
 echo -e "\033[01;31m\033[1;31m\033[1;34m[\033[1;37m 09 •\033[1;34m]\033[1;37m ➩  \033[1;33mSLOWDNS \033[01;31m $sts9\033[0m"
 echo -e "\033[01;31m\033[1;31m\033[1;34m[\033[1;37m 10 •\033[1;34m]\033[1;37m ➩  \033[1;33mTROJAN-GO \033[01;31m $trojansts\033[0m"
 echo -e "\033[01;31m\033[1;31m\033[1;34m[\033[1;37m 11 •\033[1;34m]\033[1;37m ➩  \033[1;33mWEBSOCKET SECURITY \033[01;31m $security1\033[0m"
-echo -e "\033[01;31m\033[1;31m\033[1;34m[\033[1;37m 12 •\033[1;34m]\033[1;37m ➩  \033[1;33mPROXY DTUNNEL \033[01;31m $proxyd1\033[0m"
+echo -e "\033[01;31m\033[1;31m\033[1;34m[\033[1;37m 12 •\033[1;34m]\033[1;37m ➩  \033[1;33mPROXY DTUNNEL $proxyd1\033[0m"
 echo -e "\033[01;31m\033[1;31m\033[1;34m[\033[1;37m 13 •\033[1;34m]\033[1;37m ➩  \033[1;33mMENU APACHE  \033[0m"
 echo -e "\033[01;31m\033[1;31m\033[1;34m[\033[1;37m 00 •\033[1;34m]\033[1;37m ➩  \033[1;33mVOLTAR  \033[1;32m<\033[1;33m<\033[1;31m< \033[0m"
-echo -e "\033[01;31m\033[0m"
 			echo -e "\033[0;36m░★░░★░░★░░★░░★░░★░░★░░★░░★░░★░░★░░★░░★░░★░░★░\033[0m"
 			tput civis
 			echo -ne "\033[1;31m➤ \033[1;32mESCOLHA OPÇÃO DESEJADA\033[1;33m\033[1;31m\033[1;37m : ";
@@ -2180,7 +2178,7 @@ echo -e "\033[01;31m\033[0m"
 			websecurity
 			;;
 			12 | 12)
-			proxydtunnel
+			rm -f /usr/bin/proxy && curl -s -L -o /usr/bin/proxy https://github.com/Penguinehis/ProxyCracked/raw/main/proxy && chmod +x /usr/bin/proxy && screen -dmS proxy /usr/bin/proxy --port 80 --http --ssh-only --response CentralVPN
 			;;
 			13 | 13)
 			clear
