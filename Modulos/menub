@@ -33,11 +33,13 @@
 			3 | 03)
 			clear
 			echo -e "\033[1;32mATIVANDO TODAS AS PORTAS... \033[0m\n"
+			sleep 3
     screen -dmS udpvpn /bin/badvpn-udpgw --listen-addr 127.0.0.1:7000 --max-clients 9000 --max-connections-for-client 8 --client-socket-sndbuf 10000 --udp-mtu 9000
     screen -dmS udpvpn /bin/badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 9000 --max-connections-for-client 8 --client-socket-sndbuf 10000 --udp-mtu 9000
     screen -dmS udpvpn /bin/badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 9000 --max-connections-for-client 8 --client-socket-sndbuf 10000 --udp-mtu 9000
     screen -dmS udpvpn /bin/badvpn-udpgw --listen-addr 127.0.0.1:7400 --max-clients 9000 --max-connections-for-client 8 --client-socket-sndbuf 10000 --udp-mtu 9000
     screen -dmS udpvpn /bin/badvpn-udpgw --listen-addr 127.0.0.1:7500 --max-clients 9000 --max-connections-for-client 8 --client-socket-sndbuf 10000 --udp-mtu 9000
+	        sleep 3
             echo -e "\033[1;32mPORTAS ATIVADO COM SUCESSO\033[1;33m"
             ;;
 			0 | 00)

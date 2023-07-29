@@ -478,8 +478,7 @@ case "$x" in
    ;;
    b)
    clear
-   menub
-   exit;
+   badpro
    ;;
    v)
    v2raymanager
