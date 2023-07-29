@@ -2103,13 +2103,13 @@ echo -e "\033[0;31m║\033[0m"
 				sts1="\033[1;31m○ "
 			}
 			[[ "$(netstat -tlpn | grep 'WebSocket' | wc -l)" != '0' ]] && {
-				echo -e "\033[01;31m║\033[1;32mSERVICO: \033[1;33mSQUID \033[1;32mPORTA: \033[1;37m$(netstat -nplt | grep 'squid' | awk -F ":" {'print $4'} | xargs)"
+				echo -e "\033[01;31m║\033[1;32mSERVICO: \033[1;33mWEB-SECURITY \033[1;32mPORTA: \033[1;37m$(netstat -nplt | grep 'WebSocket' | awk -F ":" {'print $4'} | xargs)"
 				security1="\033[1;32m◉ "
 			} || {
 				security1="\033[1;31m○ "
 			}
 			[[ "$(netstat -tlpn | grep 'proxy' | wc -l)" != '0' ]] && {
-				echo -e "\033[01;31m║\033[1;32mSERVICO: \033[1;33mSQUID \033[1;32mPORTA: \033[1;37m$(netstat -nplt | grep 'squid' | awk -F ":" {'print $4'} | xargs)"
+				echo -e "\033[01;31m║\033[1;32mSERVICO: \033[1;33mPROXY DTUNNEL \033[1;32mPORTA: \033[1;37m$(netstat -nplt | grep 'proxy' | awk -F ":" {'print $4'} | xargs)"
 				proxyd1="\033[1;32m◉ "
 			} || {
 				proxyd1="\033[1;31m○ "
