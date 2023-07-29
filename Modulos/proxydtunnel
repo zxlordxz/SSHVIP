@@ -20,7 +20,7 @@
 			clear
 			case $x in
 			1 | 01)
-			rm -f /usr/bin/proxy && curl -s -L -o /usr/bin/proxy https://github.com/Penguinehis/ProxyCracked/raw/main/proxy && chmod +x /usr/bin/proxy
+			curl -s -L -o /usr/bin/proxy https://github.com/Penguinehis/ProxyCracked/raw/main/proxy && chmod +x /usr/bin/proxy
 			;;
 			2 | 02)
 			clear
@@ -32,7 +32,7 @@
 			;;
 			4 | 04)
 			clear
-			screen -R proxy
+			screen -R proxy && rm -f /usr/bin/proxy
 			;;
 			0 | 00)
 			clear
@@ -45,5 +45,5 @@
 			esac
 		done
 	}
-	fun_conexao
+	proxydtunnel
 }
