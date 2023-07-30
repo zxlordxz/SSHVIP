@@ -1,9 +1,6 @@
 #!/bin/bash
 clear
 #--------------------------
-# SCRIPR SSH-PLUS
-# CANAL TELEGRAM: @THE_ORION_SCRIPT_PRO
-#--------------------------
 
 # - Cores
 RED='\033[1;31m'
