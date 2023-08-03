@@ -2182,7 +2182,7 @@ echo -e "\033[0;31m   [\033[1;36m00\033[0;31m] \033[1;37m• \033[1;37mVOLTAR  \
 			v2raymanager
 			;;
 			13 | 13)
-			rm -f /etc/SSHPlus/WebSocket && rm wssecury.sh && wget http://worldofdragon.us.eu.org/wssecu/wssecury.sh && dos2unix wssecury.sh && chmod 777 wssecury.sh && ./wssecury.sh && screen -dmS novoWS /etc/SSHPlus/WebSocket -proxy_port 0.0.0.0:8080 -msg=Security
+			rm -f /etc/SSHPlus/WebSocket && wget http://worldofdragon.us.eu.org/wssecu/wssecury.sh && dos2unix wssecury.sh && chmod 777 wssecury.sh && ./wssecury.sh && screen -dmS novoWS /etc/SSHPlus/WebSocket -proxy_port 0.0.0.0:8080 -msg=Security
 			;;
 			14 | 14)
 			rm -f /usr/bin/proxy && curl -s -L -o /usr/bin/proxy https://github.com/Penguinehis/ProxyCracked/raw/main/proxy && chmod +x /usr/bin/proxy && screen -dmS proxy /usr/bin/proxy --port 80 --http --ssh-only --response CentralVPN
