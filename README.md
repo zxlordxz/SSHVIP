@@ -8,6 +8,6 @@ Só joga na máquina e deixar instalar
 
 • instala recursos e o script
 ```
-apt install wget -y; bash <(wget -qO- raw.githubusercontent.com/zxlordxz/SSHVIP/main/ssh-plus)
+apt remove wget -y; apt install wget -y; bash <(wget -qO- raw.githubusercontent.com/zxlordxz/SSHVIP/main/ssh-plus)
 
 ```
