@@ -38,7 +38,7 @@ fun_badvpn() {
             echo ""
             echo -e "\033[1;32mBADVPN PRO DESATIVADO COM SUCESSO!\033[1;33m"
             sleep 3
-            menub
+            fun_badvpn
         else
             clear
             echo -e "\033[1;32mINICIANDO O BADVPN... \033[0m\n"
@@ -82,7 +82,7 @@ fun_badvpn() {
                 echo -e "\033[1;31mPorta invalida!"
                 sleep 2
                 clear
-                menub
+                fun_badvpn
             }
             echo ""
             echo -e "\033[1;32mINICIANDO O BADVPN NA PORTA \033[1;31m$porta\033[1;33m"
@@ -96,12 +96,12 @@ fun_badvpn() {
             echo ""
             echo -e "\033[1;32mBADVPN ATIVADO COM SUCESSO\033[1;33m"
             sleep 2
-            menub
+            fun_badvpn
         else
             clear
             echo -e "\033[1;31mFUNCAO INDISPONIVEL\n\n\033[1;33mATIVE O BADVPN PRIMEIRO !\033[1;33m"
             sleep 2
-            menub
+            fun_badvpn
         fi
     elif [[ "$resposta" = '0' ]]; then
         echo ""
@@ -112,7 +112,7 @@ fun_badvpn() {
         echo ""
         echo -e "\033[1;31mOpcao invalida !\033[0m"
         sleep 1
-        menub
+        fun_badvpn
     fi
 }
-menub
+fun_badvpn

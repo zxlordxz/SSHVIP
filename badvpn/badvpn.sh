@@ -63,10 +63,10 @@ fun_udp1 () {
        fun_udpon2 () {
            screen -dmS udpvpn /bin/antcrashvpn.sh
            [[ $(grep -wc "udpvpn" /etc/autostart) = '0' ]] && {
-		       echo -e "ps x | grep 'udpvpn' | grep -v 'grep' && echo 'ON' || screen -dmS udpvpn /bin/badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 9000 --max-connections-for-client 8 --client-socket-sndbuf 10000" >> /etc/autostart
+		       echo -e "ps x | grep 'udpvpn' | grep -v 'grep' && echo 'ON' || screen -dmS udpvpn /bin/badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 90000 --max-connections-for-client 8 --client-socket-sndbuf 10000" >> /etc/autostart
 		   } || {
 		       sed -i '/udpvpn/d' /etc/autostart
-		       echo -e "ps x | grep 'udpvpn' | grep -v 'grep' && echo 'ON' || screen -dmS udpvpn /bin/badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 9000 --max-connections-for-client 8 --client-socket-sndbuf 10000" >> /etc/autostart
+		       echo -e "ps x | grep 'udpvpn' | grep -v 'grep' && echo 'ON' || screen -dmS udpvpn /bin/badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 90000 --max-connections-for-client 8 --client-socket-sndbuf 10000" >> /etc/autostart
 		   }
            sleep 1
        }
