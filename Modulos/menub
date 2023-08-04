@@ -1,14 +1,14 @@
 #!/bin/bash
     clear
     figlet "     BADVPN" | lolcat
-    echo -e "\033[0m"
+    echo -e "\033[0;36m╔══════════════════════════════•⊱✦⊰•══════════════════════════════╗\033[0m"
 	if ps x | grep -w udpvpn | grep -v grep 1>/dev/null 2>/dev/null; then
         echo -e "\033[1;33mPORTAS\033[1;37m: \033[1;32m$(netstat -nplt | grep 'badvpn-ud' | awk {'print $4'} | cut -d: -f2 | xargs)"
     else
         sleep 0.1
     fi
     var_sks1=$(ps x | grep "udpvpn"|grep -v grep > /dev/null && echo -e "\033[1;32m◉ " || echo -e "\033[1;31m○ ")
-	echo -e "\033[0;36m╔══════════════════════════════•⊱✦⊰•══════════════════════════════╗\033[0m"
+    echo -e "\033[0;36m° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° °\033[0m"
     echo -e " \033[1;37mATIVE O BADVPN PRO/ARM PRIMEIRO, ANTES DE ATIVAR TODAS AS PORTAS \033[0m"
 	echo -e "\033[0;36m° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° °\033[0m"
     echo -e "\033[0;31m   [\033[1;36m01\033[0;31m] \033[1;37m• \033[1;37mBADVPN PRO $stsu\033[0m"
