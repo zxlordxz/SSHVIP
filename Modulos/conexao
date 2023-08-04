@@ -2049,7 +2049,7 @@ exit 0' >$RCLOCAL
 			clear
 proxyd1=$(ps x | grep "proxy"|grep -v grep > /dev/null && echo -e "\033[1;32m(ON) " || echo -e "\033[1;31m(OFF) ")
 security2=$(ps x | grep "WebSocket"|grep -v grep > /dev/null && echo -e "\033[1;32m(ON) " || echo -e "\033[1;31m(OFF) ")
-            figlet "     CONEXÕES" | lolcat
+            figlet "     CONEXOES" | lolcat
             echo -e "\033[0;36m╔═══════════════════════════•⊱✦⊰•═══════════════════════════╗\033[0m"
 			echo -e "\033[01;31m║\033[1;32mSERVICO: \033[1;33mOPENSSH \033[1;32mPORTA: \033[1;37m$(grep 'Port' /etc/ssh/sshd_config | cut -d' ' -f2 | grep -v 'no' | xargs)" && sts6="\033[1;32m◉ "
 			[[ "$(netstat -tlpn | grep 'docker' | wc -l)" != '0' ]] && {
