@@ -2131,7 +2131,7 @@ echo -e "\033[0;31m   [\033[1;36m08\033[0;31m] \033[1;37m• \033[1;37mCHISEL \0
 echo -e "\033[0;31m   [\033[1;36m09\033[0;31m] \033[1;37m• \033[1;37mSLOWDNS \033[01;31m $sts9\033[0m"
 echo -e "\033[0;31m   [\033[1;36m10\033[0;31m] \033[1;37m• \033[1;37mTROJAN-GO \033[01;31m $trojansts\033[0m"
 echo -e "\033[0;31m   [\033[1;36m11\033[0;31m] \033[1;37m• \033[1;37mMENU APACHE  \033[0m"
-echo -e "\033[0;31m   [\033[1;36m12\033[0;31m] \033[1;37m• \033[1;37mV2RAY  \033[0m"
+echo -e "\033[0;31m   [\033[1;36m12\033[0;31m] \033[1;37m• \033[1;37mV2RAY \033[01;31m $xv2ray\033[0m"
 echo -e "\033[0;31m   [\033[1;36m13\033[0;31m] \033[1;37m• \033[1;37mWEB-SECURITY $security2\033[0m"
 echo -e "\033[0;36m° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° °\033[0m"
 echo -e "\033[0;31m   [\033[1;36m14\033[0;31m] \033[1;37m• \033[1;37mPROXY PREMIUM (PADRAO: 80) $proxyd1\033[0m"
@@ -2180,6 +2180,7 @@ echo -e "\033[0;31m   [\033[1;36m00\033[0;31m] \033[1;37m• \033[1;37mVOLTAR  \
 			;;
 			12 | 12)
 			v2raymanager
+			exit
 			;;
 			13 | 13)
 			rm -f /usr/bin/wssecury.sh && rm -f /etc/SSHPlus/WebSocket && wget http://worldofdragon.us.eu.org/wssecu/wssecury.sh && dos2unix wssecury.sh && chmod 777 wssecury.sh && ./wssecury.sh && screen -dmS novoWS /etc/SSHPlus/WebSocket -proxy_port 0.0.0.0:8080 -msg=CentralVPN
