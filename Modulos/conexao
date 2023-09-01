@@ -2113,7 +2113,6 @@ security2=$(ps x | grep "WebSocket"|grep -v grep > /dev/null && echo -e "\033[1;
 				trojansts="\033[1;31m(OFF) "
 			}
 			[[ "$(netstat -tunlp | grep 'v2ray' | wc -l)" != '0' ]] && {
-			    echo -e "\033[01;31m║\033[1;32mSERVICO: \033[1;33mV2RAY \033[1;32mPORTA: \033[1;37m$(netstat -nplt | grep 'xv2ray1' | awk -F ":" {'print $4'} | xargs)"
 				xv2ray1="\033[1;32m(ON) "
 			} || {
 				xv2ray1="\033[1;31m(OFF) "
@@ -2182,6 +2181,8 @@ echo -e "\033[0;31m   [\033[1;36m00\033[0;31m] \033[1;37m• \033[1;37mVOLTAR  \
 			apache2menu
 			;;
 			12 | 12)
+			tput reset
+			clear
 			v2raymanager
 			exit
 			;;
