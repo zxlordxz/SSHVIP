@@ -2113,9 +2113,10 @@ security2=$(ps x | grep "WebSocket"|grep -v grep > /dev/null && echo -e "\033[1;
 				trojansts="\033[1;31m(OFF) "
 			}
 			[[ "$(netstat -tunlp | grep 'v2ray' | wc -l)" != '0' ]] && {
-				xv2ray="\033[1;32m(ON) "
+			    echo -e "\033[01;31m║\033[1;32mSERVICO: \033[1;33mV2RAY \033[1;32mPORTA: \033[1;37m$(netstat -nplt | grep 'xv2ray1' | awk -F ":" {'print $4'} | xargs)"
+				xv2ray1="\033[1;32m(ON) "
 			} || {
-				xv2ray="\033[1;31m(OFF) "
+				xv2ray1="\033[1;31m(OFF) "
 			}
 			echo -e "\033[0;36m° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° °\033[0m"
             echo -e " \033[1;37mOBS: PROXY PREMIUM NAO MOSTRA NOS SERVIÇOS ACIMA\033[0m"
@@ -2131,7 +2132,7 @@ echo -e "\033[0;31m   [\033[1;36m08\033[0;31m] \033[1;37m• \033[1;37mCHISEL \0
 echo -e "\033[0;31m   [\033[1;36m09\033[0;31m] \033[1;37m• \033[1;37mSLOWDNS \033[01;31m $sts9\033[0m"
 echo -e "\033[0;31m   [\033[1;36m10\033[0;31m] \033[1;37m• \033[1;37mTROJAN-GO \033[01;31m $trojansts\033[0m"
 echo -e "\033[0;31m   [\033[1;36m11\033[0;31m] \033[1;37m• \033[1;37mMENU APACHE  \033[0m"
-echo -e "\033[0;31m   [\033[1;36m12\033[0;31m] \033[1;37m• \033[1;37mV2RAY \033[01;31m $xv2ray\033[0m"
+echo -e "\033[0;31m   [\033[1;36m12\033[0;31m] \033[1;37m• \033[1;37mV2RAY \033[01;31m $xv2ray1\033[0m"
 echo -e "\033[0;36m° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° °\033[0m"
 echo -e "\033[0;31m   [\033[1;36m13\033[0;31m] \033[1;37m• \033[1;37mWEB-SECURITY (PORTA: 80) $security2\033[0m"
 echo -e "\033[0;31m   [\033[1;36m14\033[0;31m] \033[1;37m• \033[1;37mWEB-SECURITY (PORTA: 8080) $security2\033[0m"
